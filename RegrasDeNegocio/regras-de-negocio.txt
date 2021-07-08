@@ -1,0 +1,153 @@
+Definicão
+Website que auxilia o usuário, em época de pandemia, a encontrar todos os sites de lojas que possuem e-commerce dentro de um shopping e os redireciona diretamente para eles.
+
+Especificações dos Casos de Uso
+
+Nome: Página Principal – UC01
+Escopo: Sistema.
+Nível de Objetivo: Usuário.
+Contexto: Este caso de uso permite que o usuário acesse o estabelecimento que deseja, logo
+que entrar no site.
+Ator Principal: Usuário.
+Fluxo Principal:
+1. O usuário entra na tela principal.
+2. O sistema mostra um menu para classificar o estabelecimento que o usuário deseja acessar:
+• Agência de viagem
+• Artigos de decoração
+• Artigos esportivo
+• Praça de alimentação
+• Cinema
+• Depilação a laser
+• Diversões (Parques/Videogames)
+• Farmácia
+• Ótica
+• Joias e acessórios
+• Lavanderia
+• Lotérica
+• Loja de departamento
+• Moda e Vestuário
+• Perfumaria e cosméticos
+• Salão de beleza
+3. O usuário seleciona a opção desejada ou rola a tela para baixo para visualizar.
+4. O sistema automaticamente redireciona o usuário para a opção selecionada.
+5. Fim do caso de uso
+Fluxos Alternativos:
+A1. Usuário não tem limite para voltar nas opções da Página Principal.
+A2. Não é possível abrir nenhuma janela, automaticamente aparece a descrição do
+estabelecimento desejado.
+Regras de Negócio.
+RN1.
+1. A página inicial não deve demorar mais do que três segundos para carregar.
+
+Nome: Manter login – UC02
+Escopo: Sistema.
+Nível de Objetivo: Empresa.
+Contexto: Este caso de uso possibilita a Empresa cadastrar seu estabelecimento.
+Ator Principal: Empresa.
+Fluxo Principal:
+1. A empresa entra na tela de login.
+2. O sistema solicita login e senha para a empresa.
+3. A empresa informa seu login e sua senha.
+4. Os dados são validados pelo sistema.
+5. A empresa é logada e direcionada a preencher:
+• Adicionar nome da loja
+• Adicionar breve resumo
+• Adicionar foto
+• Adicionar andar e número de contato
+• Adicionar link do estabelecimento
+• Adicionar classificação do estabelecimento
+6. A empresa visualiza e confirma seu preenchimento.
+7. A empresa pode editar e apagar seu estabelecimento.
+8.Fim do caso de uso.
+Fluxos Alternativos:
+A1. Usuário não possui cadastro. 
+1. O Usuário é redirecionado à página de cadastro.
+2. O aplicativo solicita os seguintes dados para o Usuário:
+• Nome Completo:
+• Data de Nascimento:
+• E-mail:
+• Senha:
+• Repetir senha:
+• Confirmar o cadastro.
+• O Usuário irá confirmar seu cadastro.
+• O Usuário é redirecionado ao Fluxo Principal 1.
+A2. Login e/ou senha inválidos.
+1. O sistema mostra que o login e/ou senha são inválidos.
+2. O sistema retorna ao passo 1 do Fluxo Principal.
+A3. Recuperar senha.
+1. O Usuário informa seu e-mail.
+2. O Usuário digita o código de verificação enviado para o seu e-mail.
+3. O Usuário confirma sua nova senha.
+4. O Usuário é redirecionado para o Fluxo Principal 1.
+A4. Resumo.
+1. A empresa pode adicionar até 400 caracteres.
+Regras de Negócio.
+RN1.log
+1. Toda alteração de senha deverá ser gravada em arquivo de log.
+RN2
+1. Após errar a senha três vezes o Usuário deverá desbloquear sua conta através do e-mail que
+foi cadastrado no aplicativo.
+
+Nome: Manter favoritos – UC03
+Escopo: Sistema.
+Nível de Objetivo: Usuário.
+Contexto: Este caso de uso permite que o usuário favorite e visualize as lojas de sua preferência.
+Ator Principal: Usuário.
+Fluxo Principal: 
+1. O usuário visualiza as lojas disponíveis no menu.
+2. O usuário pode favoritas as lojas de sua preferência.
+3. O sistema marca as lojas que foram favoritadas pelo usuário.
+4. O usuário tem a opção de visualizar apenas suas lojas favoritas.
+5. Fim do caso de uso.
+Fluxos Alternativos:
+A1. Remover favorito.
+1. O usuário tem a opção de remover o favorito da loja que deseja.
+2. A página é atualizada e mostra apenas os itens que continuam favoritados pelo usuário.
+Regras de Negócio.
+RN1.Log
+1. Todos os favoritos devem ser guardados em arquivos de log.
+
+Nome: Realizar Doação – UC04
+Escopo: Sistema.
+Nível de Objetivo: Usuário.
+Contexto: Este caso de uso permite que o usuário realize uma doação para ONGs que estão
+ajudando no combate ao Covid-19.
+Ator Principal: Usuário.
+Fluxo Principal:
+1. O usuário entra na tela de doação.
+2. O usuário escolhe o valor da sua doação.
+3. O usuário informa seus dados.
+4. O usuário confirma os dados.
+5. O usuário confirma a doação.
+6. O usuário recebe a confirmação de sua doação.
+7. Fim do caso de uso.
+Fluxos Alternativos:
+A1. Dados inválidos
+1. O sistema verifica se os dados estão corretos.
+2. O sistema notifica se há algum dado inválido.
+3. O usuário é redirecionado para onde está o dado inválido.
+4. O usuário informa novamente o dado.
+5. O usuário confirma a doação.
+6. O usuário recebe a confirmação da sua doação.
+Regras de Negócio.
+RN1.Log
+1. Todas as doações deverão ser guardadas em arquivos de log.
+
+Nome: Avaliar site – UC05
+Escopo: Sistema.
+Nível de Objetivo: Usuário.
+Contexto: Este caso de uso permite que o usuário avalie e envie sugestões para melhorar o site.
+Ator Principal: Usuário.
+Fluxo Principal:
+1. O usuário entra na tela de avaliar site.
+2. O sistema apresenta uma forma de avaliação de notas que vai de 1 a 5.
+3. O usuário após informar sua avaliação é redirecionado para a página de sugestões.
+4. O usuário confirma a sugestão e a avaliação que foi feita.
+5. O usuário é redirecionado ao menu principal.
+6. Fim do caso de uso.
+Fluxos Alternativos:
+A1. Voltar ao menu principal.
+1. O usuário tem a opção de voltar ao menu principal sem realizar a avaliação.
+Regras de Negócio.
+RN1.
+1. Para enviar a avaliação é necessário que o usuário tenha preenchido o sistema de notas.
