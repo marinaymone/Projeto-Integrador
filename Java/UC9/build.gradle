@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+}
+apply plugin: 'java-library'
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src']
+        }
+    }
+}
+dependencies {
+    // This dependency is exported to consumers, that is to say found on their compile classpath.
+    api 'org.apache.commons:commons-math3:3.6.1'
+
+    // This dependency is used internally, and not exposed to consumers on their own compile classpath.
+    implementation 'com.google.guava:guava:22.0'
+
+    compile 'junit:junit:4.12'
+
+    implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.7.2'
+}
+
+task run (type: JavaExec){
+    description = "get started run"
+    main = 'lecture08.HelloJDBC'
+    classpath = sourceSets.main.runtimeClasspath
+}
